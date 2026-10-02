@@ -45,6 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="WebView"
+                app:icon="@drawable/ic_back"
                 android:backgroundTint="#8E1414"/>
 
 
