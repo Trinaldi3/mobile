@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Trinaldi">
 
         <activity
-            android:name=".pertemuan_6.SplashScreenActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -26,7 +26,7 @@
         </activity>
 
         <activity
-            android:name=".pertemuan_6.AuthActivity"
+            android:name=".AuthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 

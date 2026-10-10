@@ -1,4 +1,4 @@
-package com.example.trinaldi.pertemuan_6
+package com.example.trinaldi
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,8 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.example.trinaldi.MainActivity
-import com.example.trinaldi.R
 import com.example.trinaldi.databinding.ActivitySplashScreenBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -31,7 +29,7 @@ class SplashScreenActivity : AppCompatActivity() {
         }
 
         lifecycleScope.launch {
-            delay(2000) // Simulasi splash screen selama 2 detik
+            delay(2000)
 
             val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
             val isLogin = sharedPref.getBoolean("isLogin", false)

@@ -9,7 +9,6 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.trinaldi.databinding.ActivityMainBinding
 import com.example.trinaldi.pertemuan_4.FourthActivity
 import com.example.trinaldi.pertemuan_5.FifthActivity
-import com.example.trinaldi.pertemuan_6.AuthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -35,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnToFourth.setOnClickListener {
             val i = Intent(this, FourthActivity::class.java)
-            i.putExtra("name", "Politeknik Caltex Rumbai")
+            i.putExtra("name", "Politeknik Caltex Riau")
             i.putExtra("from", "Rumbai")
             i.putExtra("age", 25)
             startActivity(i)
@@ -56,8 +55,6 @@ class MainActivity : AppCompatActivity() {
                     editor.apply()
 
                     dialog.dismiss()
-                    val intent = Intent(this@MainActivity, AuthActivity::class.java)
-                    startActivity(intent)
                     finish()
                 }
                 .setNegativeButton("Batal") { dialog, _ ->
