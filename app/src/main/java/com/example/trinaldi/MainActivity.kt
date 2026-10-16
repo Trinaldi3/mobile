@@ -7,8 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.trinaldi.databinding.ActivityMainBinding
-import com.example.trinaldi.pertemuan_4.FourthActivity
-import com.example.trinaldi.pertemuan_5.FifthActivity
+import com.example.trinaldi.Home.pertemuan_4.FourthActivity
+import com.example.trinaldi.Home.pertemuan_5.FifthActivity
+import com.example.trinaldi.Home.pertemuan_7.SeventhActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -40,7 +41,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
 
-        binding.btnTOFifth.setOnClickListener {
+        // Perbaikan typo penulisan ID tombol
+        binding.btnToFifth.setOnClickListener {
             val i = Intent(this, FifthActivity::class.java)
             startActivity(i)
         }
@@ -61,6 +63,12 @@ class MainActivity : AppCompatActivity() {
                     dialog.dismiss()
                 }
                 .show()
+        }
+
+        // Perbaikan typo penulisan ID tombol
+        binding.btnToSeventh.setOnClickListener {
+            val i = Intent(this, SeventhActivity::class.java)
+            startActivity(i)
         }
     }
 }

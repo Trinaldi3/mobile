@@ -1,4 +1,4 @@
-package com.example.trinaldi.pertemuan_4
+package com.example.trinaldi.Home.pertemuan_4
 
 import android.content.Intent
 import android.os.Bundle
