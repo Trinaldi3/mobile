@@ -13,6 +13,19 @@ class Messageragment : Fragment() {
     private var _binding: FragmentMessageragmentBinding? = null
     private val binding get() = _binding!!
 
+    private val messageList = listOf(
+        MessageModel("Alya", "Halo! Apa kabar?", "https://avatarapi.runflare.run/public/1", "10:30"),
+        MessageModel("Budi", "Sudah makan?", "https://avatarapi.runflare.run/public/2", "10:15"),
+        MessageModel("Citra", "Jangan lupa tugasnya ya!", "https://avatarapi.runflare.run/public/3", "09:45"),
+        MessageModel("Dika", "Besok kita rapat jam 9", "https://avatarapi.runflare.run/public/4", "09:10"),
+        MessageModel("Eka", "Nice job kemarin!", "https://avatarapi.runflare.run/public/5", "08:30"),
+        MessageModel("Fajar", "Lagi ngapain?", "https://avatarapi.runflare.run/public/6", "08:00"),
+        MessageModel("Gita", "Boleh minta tolong?", "https://avatarapi.runflare.run/public/7", "Kemarin"),
+        MessageModel("Hana", "Lihat email ya", "https://avatarapi.runflare.run/public/8", "Kemarin"),
+        MessageModel("Irfan", "Oke noted", "https://avatarapi.runflare.run/public/9", "Kemarin"),
+        MessageModel("Joko", "Sampai jumpa besok", "https://avatarapi.runflare.run/public/10", "2 hari lalu")
+    )
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,6 +41,10 @@ class Messageragment : Fragment() {
         (requireActivity() as AppCompatActivity).supportActionBar?.apply {
             title = "Message"
         }
+
+        val adapter = MessageAdapter(requireContext(), messageList)
+        // Diperbaiki: listMessageItem -> listMessageItems
+        binding.listMessageItems.adapter = adapter
     }
 
     override fun onDestroyView() {
