@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import com.example.trinaldi.Home.pertemuan_10.TenthActivity
 import com.example.trinaldi.Home.pertemuan_4.FourthActivity
 import com.example.trinaldi.Home.pertemuan_5.FifthActivity
 import com.example.trinaldi.Home.pertemuan_7.SeventhActivity
@@ -73,6 +74,11 @@ class HomeFragment : Fragment() {
         // Perbaikan typo penulisan ID tombol
         binding.btnToSeventh.setOnClickListener {
             val i = Intent(requireContext(), SeventhActivity::class.java)
+            startActivity(i)
+        }
+
+        binding.btnToTenth.setOnClickListener {
+            val i = Intent(requireContext(), TenthActivity::class.java)
             startActivity(i)
         }
     }
