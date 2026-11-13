@@ -40,6 +40,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.recyclerview)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -49,4 +50,5 @@ dependencies {
     annotationProcessor ("com.github.bumptech.glide:compiler:5.0.9")
 
     implementation("androidx.gridlayout:gridlayout:1.0.0")
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
 }
