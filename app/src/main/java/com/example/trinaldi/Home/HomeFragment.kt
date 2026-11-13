@@ -12,6 +12,8 @@ import com.example.trinaldi.Home.pertemuan_10.TenthActivity
 import com.example.trinaldi.Home.pertemuan_4.FourthActivity
 import com.example.trinaldi.Home.pertemuan_5.FifthActivity
 import com.example.trinaldi.Home.pertemuan_7.SeventhActivity
+// Tambahkan import ini di bagian atas HomeFragment.kt
+import com.example.trinaldi.Home.pertemuan_11.EleventhActivity
 import com.example.trinaldi.R
 import com.example.trinaldi.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -81,6 +83,16 @@ class HomeFragment : Fragment() {
             val i = Intent(requireContext(), TenthActivity::class.java)
             startActivity(i)
         }
+
+        binding.btnToEleventh.setOnClickListener {
+            val i = Intent(requireContext(), EleventhActivity::class.java)
+            startActivity(i)
+        }
+
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     }
