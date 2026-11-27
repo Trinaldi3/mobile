@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -52,4 +53,10 @@ dependencies {
 
     implementation("androidx.gridlayout:gridlayout:1.0.0")
     implementation("androidx.recyclerview:recyclerview:1.4.0")
+
+    val room_version = "2.7.0"
+    implementation("androidx.room:room-runtime:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    ksp ("androidx.room:room-compiler:$room_version")
+
 }
