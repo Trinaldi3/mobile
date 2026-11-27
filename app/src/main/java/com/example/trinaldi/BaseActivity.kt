@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.trinaldi.Home.HomeFragment
 import com.example.trinaldi.Message.Messageragment
 import com.example.trinaldi.More.MoreFragment
+import com.example.trinaldi.Note.NoteFragment
 import com.example.trinaldi.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -38,8 +39,11 @@ class BaseActivity : AppCompatActivity() {
                     true
                 }
                 R.id.message -> {
-                    // Diubah ke Messageragment() agar sesuai dengan import dan nama kelas kamu
                     replaceFragment(Messageragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
                     true
                 }
                 R.id.more -> {
